@@ -1,0 +1,153 @@
+@import main
+@import footer
+@import mixins
+body
+    margin: 0
+.wrapper
+    max-width: 1920px
+    margin: 0 auto
+    padding: 19px 50px
+h1,h2,h3,h4,h5,h6
+    margin: 0
+    padding: 0
+    text-align: center
+header
+    background-image: url(/img/HeaderBackground.png)
+    background-repeat: no-repeat
+
+p.logoImg
+    padding: 10px 0 0 10px
+    margin: 0
+    font-size: 30px
+    letter-spacing: 6px
+    line-height: 29px
+    color: #ffffff
+    font-weight: 700
+    font-family: "Maven Pro"
+.nav
+    display: none
+    +media(907)
+        display: flex
+.nav >ul a 
+    text-decoration: none
+    font-size: 16px
+    line-height: 19px
+    color: #ffffff
+    font-weight: 500
+    font-family: "Maven Pro"
+    padding-bottom: 13px
+    &:hover
+        
+        border-bottom: 2px solid #fff
+.cta
+    padding: 0 25px
+    border-radius: 25px
+    background-color: rgba(110,69,226,0)
+    border: 1px solid #bbb
+    text-decoration: none
+    cursor: pointer
+    &:hover
+        background-color: #6e45e2
+        border: 1px solid #6e45e2
+.cta a
+    padding: 0
+    margin: 0
+    font-size: 12px
+    letter-spacing: 1px
+    line-height: 50px
+    color: #ffffff
+    text-decoration: none
+    text-transform: uppercase
+    font-weight: 700
+    font-family: "Maven Pro"
+    text-align: center
+    &:hover
+        text-decoration: none
+.marg
+    margin-bottom: 189px
+ul
+    display: flex 
+
+.logo
+    display: flex    
+li
+   list-style: none 
+   padding: 0 30px
+.flex
+    display: flex 
+    justify-content: center
+    flex-wrap: wrap
+    +media(1151)
+        justify-content: space-between
+.header-title
+    text-align: center
+p.skills
+    margin: 0
+    font-size: 14px
+    letter-spacing: 1px
+    line-height: 32px
+    color: #ffffff
+    font-weight: 700
+    font-family: "Maven Pro"
+    padding: 20px 0
+    text-transform: uppercase
+    text-align: center
+.header-title h1
+    margin: 0
+    font-size: 86px
+    letter-spacing: -3px
+    line-height: 72px
+    color: #ffffff
+    font-weight: 500
+    font-family: "Maven Pro"
+    text-align: center
+.underH
+    margin: 0
+    padding: 0
+    padding-top: 20px
+    font-size: 16px
+    line-height: 28px
+    color: #ffffff
+    font-weight: 400
+    font-family: "Maven Pro"
+    text-align: center
+.flex-centr
+    display: flex
+    justify-content: center
+    
+.rel
+     position: relative
+.lineL:after
+    position: absolute
+    content: ""
+    border-right: 1px solid #fff
+    width: 10px
+    height: 25px
+    transform: rotate(90deg)
+    top: 29.7%
+    left: 38%
+.lineR:before
+    position: absolute
+    content: ""
+    border-right: 1px solid #fff
+    width: 10px
+    height: 25px
+    transform: rotate(90deg)
+    top: 29.7%
+    right: 38%
+.circle
+    position: relative
+    width: 64px
+    height: 64px
+    border-radius: 50%
+    filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+    background-color: #ffffff
+.arrow:before
+    position: absolute
+    content: ""
+    width: 15px
+    height: 16px
+    background-image: url(/img/arrow.png)
+    top: 39%
+    left: 39%
+///////////////////////////////// main

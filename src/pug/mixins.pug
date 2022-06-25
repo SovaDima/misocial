@@ -1,0 +1,23 @@
+mixin menu(items)
+    for item in items 
+        li 
+            a(href=item.url) #{item.name} 
+
+mixin blocks(item) 
+   figure 
+      figcaption.block
+         picture 
+            source(src=item.src + ".webp" type="image/webp") 
+            source(srcset=item.src + ".png" type="image/png") 
+            img(src=item.src + ".png" alt=item.alt) 
+         p 
+            b personal 
+         p 
+            sup.symbol $ 
+            //- strong= item.price 
+            strong #{item.price} 
+               //- sub /month
+            i   /month 
+         p.descript #{item.description}
+         .cta 
+            a(href=item.url) select plan 

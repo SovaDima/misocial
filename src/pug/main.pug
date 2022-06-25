@@ -1,0 +1,35 @@
+include var
+include mixins 
+doctype html
+html(lang="uk")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
+        title Document
+    body 
+        main 
+            .wrapper
+                .main-text
+                    p.skills MIsocial
+                    h2 Select a Plan
+                    p.underH 
+                        |Lorem ipsum dolor sit amet, consectetur adipisicing
+                        br
+                        |elit, sed do eiusmod tempor incididunt ut.
+                .planes
+                    +blocks(key.Free)
+                    +blocks(key.Home)
+                    +blocks(key.Premium) 
+            .take-control 
+                    p.skills SOCIAL MARKETING & ANALYTICS
+                    h3 Take control of your data
+                    .control-but 
+                        .cta 
+                                a(href="#") get started
+                        .cta 
+                                a(href="#") explore features
+                    
+        include footer
+

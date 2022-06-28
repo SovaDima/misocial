@@ -2,7 +2,10 @@
 main
     padding: 0
 .main-text
-    padding-top: 120px
+    position: relative
+    padding-top: 30px
+    +media(900)
+        padding-top: 120px
     h2
         font-size: 60px
         letter-spacing: -2px
@@ -13,13 +16,38 @@ main
     p.underH
         color: #9fa4af
     p.skills
+    strong
+        position: relative
         padding: 0
+        margin: 0 15px
         font-size: 14px
         letter-spacing: 1px
         line-height: 32px
         color: #9fa4af
         font-weight: 700
         font-family: "Maven Pro" 
+main 
+    i
+        position: relative
+    .lineM:after
+        position: absolute
+        content: ""
+        border-right: 1px solid #6e45e2
+        width: 10px
+        height: 25px
+        transform: rotate(90deg)
+        left: -30px
+        top: -8px
+    .lineM:before
+        position: absolute
+        content: ""
+        border-right: 1px solid #6e45e2
+        width: 10px
+        height: 25px
+        transform: rotate(90deg)
+        right: -30px
+        top: -8px
+        
 table 
     display: flex
     justify-content: space-around

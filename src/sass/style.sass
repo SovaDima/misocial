@@ -14,6 +14,7 @@ h1,h2,h3,h4,h5,h6
 header
     background-image: url(../img/HeaderBackground.png)
     background-repeat: no-repeat
+    padding-bottom: 50px
 
 p.logoImg
     padding: 10px 0 0 10px
@@ -84,9 +85,8 @@ li
   width: 25px
   height: 25px
   cursor: pointer
-  +media(907)
+  +media(928)
     display: none
-
   span
     content: ""
     position: absolute
@@ -139,6 +139,7 @@ li
     text-align: center
 p.skills
     margin: 0
+    position: relative
     font-size: 14px
     letter-spacing: 1px
     line-height: 32px
@@ -173,38 +174,25 @@ p.skills
     display: flex
     justify-content: center
     
-.rel
-     position: relative
-.lineL:after
-    display: none
+.line:after
     position: absolute
     content: ""
     border-right: 1px solid #fff
     width: 10px
     height: 25px
+    top: 15px
     transform: rotate(90deg)
-    top: 29.7%
-    left: 30%
-    +media(1250)
-        top: 28%
-        left: 40%
-    +media(1170)
-        display: flex
-.lineR:before
-    display: none
+    left: -30px
+.line:before
     position: absolute
     content: ""
     border-right: 1px solid #fff
     width: 10px
     height: 25px
+    top: 15px
     transform: rotate(90deg)
-    top: 29.7%
-    right: 30%
-    +media(1250)
-        top: 28%
-        right: 40%
-    +media(1170)
-        display: flex
+    right: -30px
+
 .circle
     position: relative
     width: 64px

@@ -1,4 +1,6 @@
-@import mixins
+@import components/mixins
+main
+    padding: 0 20px
 .main-text
     padding-top: 120px
     h2
@@ -118,17 +120,22 @@ figcaption
     height: 524px
     h3
         padding: 0 0 18px 0
-        font-size: 60px
+        font-size: 40px
         letter-spacing: -2px
         line-height: 72px
         color: #ffffff
         font-weight: 500
         font-family: "Maven Pro"
         text-align: center
+        +media(360)
+            font-size: 60px
 .control-but
-    display: flex
+    display: grid
     justify-content: center
-    column-gap: 10px
+    row-gap: 10px
+    +media(380)
+        display: flex
+        column-gap: 10px
 
 .take-control
     .cta a

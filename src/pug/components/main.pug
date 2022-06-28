@@ -9,9 +9,9 @@ html(lang="uk")
         link(rel="stylesheet", href="css/styles.css")
         title Document
     body 
-        main 
+        main
             .wrapper
-                .main-text
+                .main-text(id="main")  
                     p.skills MIsocial
                     h2 Select a Plan
                     p.underH 
@@ -22,14 +22,14 @@ html(lang="uk")
                     +blocks(key.Free)
                     +blocks(key.Home)
                     +blocks(key.Premium) 
-            .take-control 
-                    p.skills SOCIAL MARKETING & ANALYTICS
-                    h3 Take control of your data
-                    .control-but 
-                        .cta 
-                                a(href="#") get started
-                        .cta 
-                                a(href="#") explore features
+                .take-control 
+                        p.skills SOCIAL MARKETING & ANALYTICS
+                        h3 Take control of your data
+                        .control-but 
+                            .cta 
+                                    a(href="#") get started
+                            .cta 
+                                    a(href="#") explore features
                     
         include footer
 

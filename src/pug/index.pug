@@ -1,5 +1,5 @@
-include var
-include mixins 
+include components/var
+include components/mixins 
 
 doctype html
 html(lang="uk")
@@ -13,13 +13,12 @@ html(lang="uk")
         <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scakable=yes,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
         title PUG
     body
-        header 
-            .wrapper
+        .wrapper
+            header 
                 .flex
                     .logo
                         img(src="/img/logo..png", alt="Логотип")
                         p.logoImg MISOCIAL
-
                     .nav 
                         ul
                             +menu(headerMenu)
@@ -49,8 +48,8 @@ html(lang="uk")
                             |elit, sed do eiusmod tempor incididunt ut.
                     .marg
                     .flex-centr
-                        a(href="#") 
+                        a(href="#main") 
                             .circle(class="arrow")
-        include main
+        include components/main
         
 

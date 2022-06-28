@@ -1,12 +1,12 @@
-@import main
-@import footer
-@import mixins
+@import components/main
+@import components/footer
+@import components/mixins
 body
     margin: 0
 .wrapper
     max-width: 1920px
     margin: 0 auto
-    padding: 19px 50px
+    padding:0 0
 h1,h2,h3,h4,h5,h6
     margin: 0
     padding: 0
@@ -26,7 +26,7 @@ p.logoImg
     font-family: "Maven Pro"
 .nav
     display: none
-    +media(907)
+    +media(927)
         display: flex
 .nav >ul a 
     text-decoration: none
@@ -64,20 +64,76 @@ p.logoImg
     &:hover
         text-decoration: none
 .marg
-    margin-bottom: 189px
+    margin-bottom: 120px
+    +media(927)
+        margin-bottom: 189px
 ul
     display: flex 
 
 .logo
-    display: flex    
+    display: flex 
+    cursor: pointer   
 li
    list-style: none 
    padding: 0 30px
+.hamburger
+  display: flex
+  position: relative
+  overflow: hidden
+  padding: 10px
+  width: 25px
+  height: 25px
+  cursor: pointer
+  +media(907)
+    display: none
+
+  span
+    content: ""
+    position: absolute
+    width: 25px
+    height: 3px
+    background-color: #000
+    border-radius: 5px
+    top: 57%
+    transition: box-shadow .25s ease-in-out
+
+    &:before, &:after
+      content: ""
+      position: absolute
+      width: 25px
+      height: 3px
+      background-color: #000
+      border-radius: 5px
+      top: 57%
+      transition: box-shadow .25s ease-in-out
+
+    transform: translateY(-50%)
+
+    &:before
+      top: 8px
+
+    &:after
+      top: -8px
+
+  &:hover span
+    background-color: #444
+
+    &:before, &:after
+      background-color: #444
+
+    box-shadow: 0 0 5px 2px rgba(0, 255, 0, 0.7)
+
+    &:before
+      box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.7)
+
+    &:after
+      box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.7)
 .flex
     display: flex 
+    padding: 20px 50px 0 50px
     justify-content: center
     flex-wrap: wrap
-    +media(1151)
+    +media(1155)
         justify-content: space-between
 .header-title
     text-align: center
@@ -94,13 +150,15 @@ p.skills
     text-align: center
 .header-title h1
     margin: 0
-    font-size: 86px
+    font-size: 54px
     letter-spacing: -3px
     line-height: 72px
     color: #ffffff
     font-weight: 500
     font-family: "Maven Pro"
     text-align: center
+    +media(360)
+        font-size: 86px
 .underH
     margin: 0
     padding: 0
@@ -118,6 +176,7 @@ p.skills
 .rel
      position: relative
 .lineL:after
+    display: none
     position: absolute
     content: ""
     border-right: 1px solid #fff
@@ -125,8 +184,14 @@ p.skills
     height: 25px
     transform: rotate(90deg)
     top: 29.7%
-    left: 38%
+    left: 30%
+    +media(1250)
+        top: 28%
+        left: 40%
+    +media(1170)
+        display: flex
 .lineR:before
+    display: none
     position: absolute
     content: ""
     border-right: 1px solid #fff
@@ -134,7 +199,12 @@ p.skills
     height: 25px
     transform: rotate(90deg)
     top: 29.7%
-    right: 38%
+    right: 30%
+    +media(1250)
+        top: 28%
+        right: 40%
+    +media(1170)
+        display: flex
 .circle
     position: relative
     width: 64px
